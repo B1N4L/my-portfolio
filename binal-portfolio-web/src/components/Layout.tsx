@@ -1,21 +1,29 @@
-import { Outlet } from "react-router-dom";
+//import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import hudLine from "../assets/hud-line.svg";
 import Navbar from "./Navbar.tsx";
+import Header from "./Header.tsx";
+import Projects from "./Projects.tsx";
+import AboutMe from "./AboutMe.tsx";
 
 const Layout = () => {
     return (
-        <div className="min-h-screen bg-gray-50">
+        // make the root fill the viewport and use column flex so main can grow
+        <div className="h-screen flex flex-col bg-gray-50">
             <Navbar />
 
-            <main className="relative">
-                <Outlet />
+            <main className="relative flex-1 overflow-auto p-10">
+                {/* TODO: integrate with react router later like this*/}
+                {/*<Outlet />*/}
+                <Header />
+                <AboutMe/>
+                <Projects />
             </main>
 
             <Footer />
 
-            {/* HUD overlay */}
-            <div className="pointer-events-none fixed inset-0 z-50">
+            {/* Fixed HUD overlay decoration*/}
+            <div className="pointer-events-none my-8 fixed inset-0 z-50">
                 <img
                     src={hudLine}
                     alt=""
