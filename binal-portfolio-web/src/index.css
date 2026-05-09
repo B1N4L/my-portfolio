@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+html,
+body {
+    cursor: none;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    cursor: none !important;
+}
+
+@layer base {
+    main {
+        background: red;
+    }
+}
+
+
+/*If you later want normal text selection or input carets back in forms, you can re-enable them for specific elements like this:*/
+
+/*input,*/
+/*textarea,*/
+/*select {*/
+/*    cursor: text !important;*/
+/*}*/
