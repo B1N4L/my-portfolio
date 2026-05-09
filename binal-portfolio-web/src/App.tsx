@@ -1,11 +1,14 @@
 import './App.css'
+import Layout from "./components/Layout.tsx";
+import CustomCursor from "./components/CustomCursor.jsx.tsx";
 
 function App() {
 
   return (
-    <>
-      <div>My portfolio</div>
-    </>
+      <div>
+          <CustomCursor label="You" />
+          <Layout/>
+      </div>
   )
 }
 
